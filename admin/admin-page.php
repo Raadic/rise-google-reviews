@@ -22,11 +22,11 @@ if (!defined('ABSPATH')) {
     </div>
     
     <div class="rise-gr-admin-tabs">
-        <nav class="nav-tab-wrapper rise-nav">
-            <a href="#settings" class="nav-tab rise-nav-item nav-tab-active"><?php esc_html_e('Settings', 'rise-google-reviews'); ?></a>
-            <a href="#shortcodes" class="nav-tab rise-nav-item"><?php esc_html_e('Shortcodes', 'rise-google-reviews'); ?></a>
-            <a href="#help" class="nav-tab rise-nav-item"><?php esc_html_e('Help', 'rise-google-reviews'); ?></a>
-        </nav>
+        <div class="rise-nav">
+            <a href="#settings" class="nav-tab nav-tab-active"><?php esc_html_e('Settings', 'rise-google-reviews'); ?></a>
+            <a href="#shortcodes" class="nav-tab"><?php esc_html_e('Shortcodes', 'rise-google-reviews'); ?></a>
+            <a href="#help" class="nav-tab"><?php esc_html_e('Help', 'rise-google-reviews'); ?></a>
+        </div>
         
         <div class="tab-content">
             <div id="settings" class="tab-pane active">
@@ -61,8 +61,8 @@ if (!defined('ABSPATH')) {
                         </p>
                         
                         <div class="rise-form-row" style="margin-top: 30px;">
-                            <?php submit_button('', 'primary rise-button rise-button-primary', 'submit', false); ?>
-                            <button type="button" id="rise-gr-clear-cache" class="button rise-button"><?php esc_html_e('Clear Cache', 'rise-google-reviews'); ?></button>
+                            <?php submit_button(__('Save Changes', 'rise-google-reviews'), 'primary', 'submit', false); ?>
+                            <button type="button" id="rise-gr-clear-cache" class="button-secondary"><?php esc_html_e('Clear Cache', 'rise-google-reviews'); ?></button>
                         </div>
                     </form>
                 </div>
@@ -139,7 +139,7 @@ if (!defined('ABSPATH')) {
                         <li><?php esc_html_e('Copy the API key and paste it in the settings tab', 'rise-google-reviews'); ?></li>
                     </ol>
                     <p>
-                        <a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key" target="_blank" class="rise-button rise-button-primary"><?php esc_html_e('Google Cloud Console', 'rise-google-reviews'); ?></a>
+                        <a href="https://developers.google.com/maps/documentation/places/web-service/get-api-key" target="_blank" class="button button-primary"><?php esc_html_e('Google Cloud Console', 'rise-google-reviews'); ?></a>
                     </p>
                 </div>
                 
@@ -153,7 +153,7 @@ if (!defined('ABSPATH')) {
                         <li><?php esc_html_e('Copy the Place ID and paste it in the settings tab', 'rise-google-reviews'); ?></li>
                     </ol>
                     <p>
-                        <a href="https://developers.google.com/maps/documentation/places/web-service/place-id" target="_blank" class="rise-button rise-button-primary"><?php esc_html_e('Place ID Finder', 'rise-google-reviews'); ?></a>
+                        <a href="https://developers.google.com/maps/documentation/places/web-service/place-id" target="_blank" class="button button-primary"><?php esc_html_e('Place ID Finder', 'rise-google-reviews'); ?></a>
                     </p>
                 </div>
                 

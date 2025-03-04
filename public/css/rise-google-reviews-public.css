@@ -90,8 +90,9 @@
 }
 
 .rise-gr-google-logo img {
-    height: 24px;
+    height: auto;
     width: auto;
+    max-height: 50px;
 }
 
 .rise-gr-slider {
