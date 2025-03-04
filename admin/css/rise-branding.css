@@ -1,0 +1,307 @@
+/* Rise Branding Styles */
+
+/* Core Variables */
+:root {
+  --primary: #c0ff2d;
+  --primary-dark: #a8e628;
+  --primary-light: #d1ff5c;
+  --text: #1a1a1a;
+  --text-light: #666666;
+  --border: #e5e7eb;
+  --bg: #f9fafb;
+  --white: #fff;
+  --error: #dc3545;
+  --success: #4CAF50;
+  --shadow: 0 2px 4px rgba(0,0,0,0.05);
+  --radius: 6px;
+  --radius-lg: 12px;
+  --font-main: 'Manrope', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+/* Base Layout */
+.rise-wrapper {
+  max-width: 1200px;
+  margin: 20px;
+  font-family: var(--font-main);
+}
+
+/* Common Components */
+.rise-card {
+  background: var(--white);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+/* Typography */
+.rise-title {
+  color: var(--text);
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.rise-text {
+  color: var(--text-light);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Navigation */
+.rise-nav {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.rise-nav-item {
+  font-weight: 500;
+  padding: 10px 20px;
+  color: var(--text-light);
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rise-nav-item:hover,
+.rise-nav-item.active {
+  color: var(--text);
+  border-bottom-color: var(--primary);
+}
+
+/* Form Elements */
+.rise-form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.rise-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.rise-label {
+  font-weight: 600;
+  color: var(--text);
+  min-width: 200px;
+}
+
+/* Toggle Switch */
+.rise-toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.rise-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.rise-toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: #ccc;
+  border-radius: 34px;
+  transition: var(--transition);
+}
+
+.rise-toggle-slider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background: var(--white);
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.rise-toggle input:checked + .rise-toggle-slider {
+  background: var(--primary);
+}
+
+.rise-toggle input:checked + .rise-toggle-slider:before {
+  transform: translateX(18px);
+}
+
+/* Grid Layout */
+.rise-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Status Indicators */
+.rise-status {
+  padding: 15px;
+  border-radius: var(--radius);
+  margin: 10px 0;
+}
+
+.rise-status.success {
+  border-left: 4px solid var(--success);
+  background: var(--bg);
+}
+
+.rise-status.error {
+  border-left: 4px solid var(--error);
+  background: var(--bg);
+}
+
+/* Buttons */
+.rise-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.rise-button-primary {
+  background: var(--primary);
+  color: var(--text);
+  border: 1px solid var(--primary-dark);
+}
+
+.rise-button-primary:hover {
+  background: var(--primary-dark);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Loading State */
+.rise-loading {
+  position: relative;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.rise-loading:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Header with logo */
+.rise-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.rise-logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.rise-header-content {
+  flex: 1;
+}
+
+.rise-version {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 5px;
+}
+
+/* Shortcode boxes */
+.rise-shortcode-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.rise-shortcode-box h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.rise-shortcode-box code {
+  display: block;
+  background: var(--white);
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.rise-shortcode-box h4 {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.rise-shortcode-box ul {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+.rise-shortcode-box li {
+  margin-bottom: 8px;
+  color: var(--text-light);
+}
+
+.rise-shortcode-box li code {
+  display: inline;
+  padding: 2px 5px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+  .rise-form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .rise-label {
+    min-width: auto;
+  }
+  
+  .rise-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rise-nav {
+    flex-wrap: wrap;
+  }
+}

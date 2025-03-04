@@ -136,10 +136,27 @@ class Rise_Google_Reviews {
             return;
         }
         
+        // Enqueue Google Fonts - Manrope
+        wp_enqueue_style(
+            'rise-gr-google-fonts',
+            'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap',
+            array(),
+            RISE_GR_VERSION
+        );
+        
+        // Enqueue admin styles
         wp_enqueue_style(
             'rise-gr-admin-styles',
             RISE_GR_PLUGIN_URL . 'admin/css/rise-google-reviews-admin.css',
             array(),
+            RISE_GR_VERSION
+        );
+        
+        // Enqueue branding styles
+        wp_enqueue_style(
+            'rise-gr-branding',
+            RISE_GR_PLUGIN_URL . 'admin/css/rise-branding.css',
+            array('rise-gr-admin-styles', 'rise-gr-google-fonts'),
             RISE_GR_VERSION
         );
         

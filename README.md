@@ -5,7 +5,7 @@ A WordPress plugin that allows you to display Google reviews on your website usi
 ## Features
 
 - Display Google reviews from your business listing
-- Two display styles: Card Slider and Floating Badge
+- Three display styles: Card Slider, Floating Badge, and Minimalist Cards
 - Filter reviews by star rating
 - Customizable appearance with light/dark themes
 - Responsive design for all devices
@@ -68,6 +68,27 @@ A WordPress plugin that allows you to display Google reviews on your website usi
 - `position` - Badge position (top-left, top-right, bottom-left, bottom-right)
 - `theme` - Color theme (light/dark)
 - `show_reviews` - Show reviews in popup (true/false)
+
+### Minimalist Cards Shortcode
+
+```
+[rise_google_reviews_cards min_rating="4" max_reviews="10" slides_to_show="3" theme="light" show_stars="true" show_date="true" card_style="rounded"]
+```
+
+#### Parameters
+
+- `min_rating` - Minimum star rating to display (1-5)
+- `max_reviews` - Maximum number of reviews to display
+- `slides_to_show` - Number of slides to show at once
+- `slides_to_scroll` - Number of slides to scroll at once
+- `autoplay` - Enable autoplay (true/false)
+- `autoplay_speed` - Autoplay speed in milliseconds
+- `arrows` - Show navigation arrows (true/false)
+- `dots` - Show navigation dots (true/false)
+- `theme` - Color theme (light/dark)
+- `show_stars` - Show rating stars (true/false)
+- `show_date` - Show review date (true/false)
+- `card_style` - Card style (rounded, square, minimal)
 
 ## Dependencies
 

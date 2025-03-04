@@ -8,9 +8,19 @@
      * Initialize sliders
      */
     function initSliders() {
+        // Initialize regular sliders
         $('.rise-gr-slider').each(function() {
             const $slider = $(this);
             const $container = $slider.closest('.rise-gr-slider-container');
+            const settings = $container.data('settings') || {};
+            
+            $slider.slick(settings);
+        });
+        
+        // Initialize cards sliders
+        $('.rise-gr-cards-slider').each(function() {
+            const $slider = $(this);
+            const $container = $slider.closest('.rise-gr-cards-container');
             const settings = $container.data('settings') || {};
             
             $slider.slick(settings);

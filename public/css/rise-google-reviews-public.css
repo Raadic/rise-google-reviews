@@ -380,6 +380,118 @@
     color: white;
 }
 
+/* Minimalist Cards Styles */
+.rise-gr-cards-container {
+    margin: 20px 0;
+}
+
+.rise-gr-cards-slider {
+    margin: 0 -10px;
+}
+
+.rise-gr-card-slide {
+    padding: 10px;
+}
+
+.rise-gr-card-inner {
+    height: 100%;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Card Styles */
+.rise-gr-style-rounded .rise-gr-card-inner {
+    border-radius: 12px;
+    box-shadow: 0 3px 10px var(--rise-gr-shadow-color);
+}
+
+.rise-gr-style-square .rise-gr-card-inner {
+    border-radius: 0;
+    box-shadow: 0 3px 10px var(--rise-gr-shadow-color);
+}
+
+.rise-gr-style-minimal .rise-gr-card-inner {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid var(--rise-gr-border-color);
+}
+
+/* Theme-specific card styles */
+.rise-gr-theme-light .rise-gr-card-inner {
+    background-color: #ffffff;
+}
+
+.rise-gr-theme-dark .rise-gr-card-inner {
+    background-color: #2d2d2d;
+}
+
+.rise-gr-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.rise-gr-card-inner .rise-gr-author-image {
+    margin-right: 12px;
+}
+
+.rise-gr-card-inner .rise-gr-author-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.rise-gr-card-inner .rise-gr-author-name {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.rise-gr-card-inner .rise-gr-author-name a {
+    color: var(--rise-gr-text-color);
+    text-decoration: none;
+}
+
+.rise-gr-card-inner .rise-gr-author-name a:hover {
+    text-decoration: underline;
+}
+
+.rise-gr-card-inner .rise-gr-review-date {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.rise-gr-card-inner .rise-gr-review-rating {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.rise-gr-card-inner .rise-gr-review-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.rise-gr-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.rise-gr-google-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+}
+
+/* Hover effect */
+.rise-gr-style-rounded .rise-gr-card-inner:hover,
+.rise-gr-style-square .rise-gr-card-inner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--rise-gr-shadow-color);
+}
+
 /* Responsive styles */
 @media (max-width: 767px) {
     .rise-gr-badge {
