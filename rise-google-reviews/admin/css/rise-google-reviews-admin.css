@@ -1,0 +1,96 @@
+/**
+ * Rise Google Reviews - Admin CSS
+ */
+
+/* Admin Tabs */
+.rise-gr-admin-tabs {
+    margin-top: 20px;
+}
+
+.rise-gr-admin-tabs .tab-content {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-top: none;
+    padding: 20px;
+}
+
+.rise-gr-admin-tabs .tab-pane {
+    display: none;
+}
+
+.rise-gr-admin-tabs .tab-pane.active {
+    display: block;
+}
+
+/* Shortcode Boxes */
+.rise-gr-shortcode-box {
+    background: #f8f9fa;
+    border: 1px solid #e2e4e7;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.rise-gr-shortcode-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.rise-gr-shortcode-box code {
+    display: block;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e4e7;
+    border-radius: 4px;
+    font-size: 13px;
+    word-break: break-all;
+}
+
+.rise-gr-shortcode-box h4 {
+    margin-bottom: 10px;
+}
+
+.rise-gr-shortcode-box ul {
+    margin-top: 0;
+}
+
+.rise-gr-shortcode-box li {
+    margin-bottom: 5px;
+}
+
+.rise-gr-shortcode-box li code {
+    display: inline;
+    padding: 2px 5px;
+    margin: 0;
+}
+
+/* Help Section */
+.rise-gr-help-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.rise-gr-help-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.rise-gr-help-section h3 {
+    margin-top: 0;
+}
+
+.rise-gr-help-section ol,
+.rise-gr-help-section ul {
+    margin-left: 20px;
+}
+
+.rise-gr-help-section li {
+    margin-bottom: 8px;
+}
+
+/* Clear Cache Button */
+#rise-gr-clear-cache {
+    margin-left: 10px;
+}
